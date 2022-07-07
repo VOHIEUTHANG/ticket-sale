@@ -1,0 +1,230 @@
+@use "variable";
+@use "mixin";
+@import "./header.scss";
+
+$size-img: 10rem;
+$padding-inside: 1rem;
+
+@mixin logo {
+  width: 60%;
+  min-width: $size-img;
+}
+
+.sider-component {
+  display: flex;
+  width: 4rem;
+  align-content: center;
+  align-items: center;
+  transition: width 0.2s linear;
+  overflow: hidden;
+  background-color: $color-sidebar;
+  border-radius: 1.6rem;
+
+  &>.w-100 {
+    background-color: $color-sidebar;
+    height: 100vh;
+    border-radius: 1.6rem;
+    position: fixed;
+    top: 0;
+  }
+
+  .logo {
+    text-align: center;
+    cursor: pointer;
+
+    img {
+      margin: 4rem auto;
+      @include logo();
+    }
+  }
+
+  .icon {
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 4rem;
+    height: 100vh;
+    position: absolute;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    cursor: pointer;
+
+    svg {
+      color: $color-primary;
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+  }
+
+  .mask {
+    overflow: hidden;
+    left: 0%;
+    height: 100%;
+    background-color: $color-sidebar;
+    transition: opacity 0.2s linear;
+    opacity: 0;
+    z-index: 3;
+
+    .menu-hr {
+      border-bottom: 1px solid $color-primary;
+      margin: 1.2rem $padding-inside;
+    }
+
+    .menu-title {
+      font-weight: bold;
+      font-size: $fs-3;
+      line-height: 2.7rem;
+      text-transform: uppercase;
+      color: $color-text-item-sidebar;
+      margin: 2rem $padding-inside;
+    }
+
+    .menu {
+      margin: 0 0.8rem 0 1rem;
+
+      .item-label {
+        padding: 1rem;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        transition: all 0.2s;
+        align-items: center;
+        justify-content: space-between;
+        height: 5rem;
+
+        &>span:first-child {
+          display: flex;
+          align-items: center;
+          // padding: 0rem 2rem;
+        }
+
+        &:hover {
+          opacity: 0.7;
+        }
+
+        .item__nav {
+          @include text-wrap;
+          font-weight: $font-weight-medium;
+          font-size: 1.6rem;
+          color: $color-text-item-sidebar;
+          height: 100%;
+          max-width: 20vw;
+        }
+
+        @media only screen and (max-width: 1334px) {
+          .item__nav {
+            font-size: 1.2rem;
+          }
+        }
+
+        .item-hover__icon {
+          margin-right: 2rem;
+
+          svg {
+            transition: color 1s;
+            font-size: 3rem;
+            width: 2.6rem;
+            height: 2.6rem;
+            color: $color-text-item-sidebar;
+          }
+        }
+
+        .icon-3dot svg {
+          color: $color-text-item-sidebar;
+          font-size: 2.2rem;
+          width: 2.2rem;
+          height: 2.2rem;
+        }
+      }
+
+      .menu--component--item {
+        border-radius: 0.6rem;
+        margin-bottom: 1rem;
+        transition: background-color 1s;
+      }
+
+      .menu--component--item.menu-active {
+        position: relative;
+        background: $color-primary;
+        border-radius: 0.8rem;
+        transition: background-color 1s;
+
+        .item__nav {
+          color: $color-white;
+          transition: color 1s;
+        }
+
+        .item-hover__icon svg {
+          color: $color-white;
+          transition: color 1s;
+        }
+
+        .icon-3dot svg {
+          color: $color-white;
+        }
+
+        .icon-3dot {
+          color: $color-white;
+        }
+      }
+
+      .menu--component--item.three-dot {
+        cursor: pointer !important;
+        position: relative;
+
+        .icon-3dot {
+          font-size: 3rem;
+          margin-left: 1.2rem;
+          margin-top: -7px;
+        }
+      }
+    }
+  }
+}
+
+.big {
+  width: 15vw;
+  cursor: initial;
+
+  .mask {
+    opacity: 1;
+  }
+}
+
+.sider-component-pointer {
+  cursor: pointer;
+}
+
+.ant-menu {
+  border-radius: 0.4rem;
+}
+
+.ant-menu-root.ant-menu-vertical,
+.ant-menu-root.ant-menu-vertical-left,
+.ant-menu-root.ant-menu-vertical-right,
+.ant-menu-root.ant-menu-inline {
+  box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12),
+    0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  left: 110% !important;
+  position: absolute;
+  top: -1rem;
+  transform: translate(0px, -50%);
+
+  //width: 26.5rem;
+  .ant-menu-item {
+    font-size: 1.6rem;
+    margin: 0;
+    background-color: $color-white;
+    color: $color-secondary-dark;
+  }
+
+  .ant-menu-item-selected {
+    font-weight: 500;
+    color: $color-primary;
+    background-color: $color-background;
+  }
+}

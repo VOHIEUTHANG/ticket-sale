@@ -1,0 +1,16 @@
+@use "variable";
+
+.main-title {
+  font-weight: bold;
+  font-size: $fs-7;
+  color: $color-primary;
+  margin: 0;
+  line-height: 3rem;
+}
+
+.secondary-title {
+  font-size: $fs-5;
+  color: $color-white;
+  font-weight: $font-weight-bold;
+  margin-top: 1rem;
+}

@@ -1,0 +1,121 @@
+@import "./variable";
+@import "./mixin";
+@font-face {
+  font-family: "Mali";
+  font-weight: normal;
+  font-display: swap;
+  src: local("Mali Regular"), local("Mali-Regular"),
+    url("../../shared/assets/font/Mali/Mali-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Mali";
+  font-weight: 600;
+  font-display: swap;
+  src: local("Mali Semi Bold"),
+  local("Mali-Semi-Bold"),
+    url("../../shared/assets/font/Mali/Mali-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Mali";
+  font-weight: bold;
+  font-display: swap;
+  src: local("Mali Bold"), local("Mali-Bold"),
+    url("../../shared/assets/font/Mali/Mali-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Mali";
+  font-weight: 500;
+  font-display: swap;
+  src: local("Mali Medium"), local("Mali-Medium"),
+    url("../../shared/assets/font/Mali/Mali-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Mali";
+  font-weight: 300;
+  font-display: swap;
+  src: local("Mali Light"), local("Mali-Light"),
+    url("../../shared/assets/font/Mali/Mali-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SigmarOne";
+  font-weight: normal;
+  font-display: swap;
+  src: local("SigmarOne Regular"),
+  local("SigmarOne-Regular"),
+    url("../../shared/assets/font/SigmarOne/SigmarOne-Regular.ttf") format("truetype");
+}
+
+html {
+  font-size:10px;
+  @include respond('xs-screen') {
+    font-size: 3px;
+  }
+  @include respond('sm-screen') {
+    font-size:5px;
+  }
+  @include respond('md-screen') {
+    font-size: 7px;
+  }
+  @include respond('xl-screen') {
+    font-size: 9px;
+  }
+  @include respond('xxl-screen') {
+    font-size: 10px;
+  }
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: normal;
+  font-family: $main-font;
+  color: $color-main-text;
+  background-color: $color-background;
+  line-height: normal;
+}
+
+div#root {
+  height: 100%;
+  overflow: hidden;
+  width: 100vw;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  color: $color-main-text;
+  transition: 0.2s;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.margin-select {
+  margin-right: 1vw;
+}
+.w-20{
+  width: 20% !important;
+}
+.w-80{
+  width: 80% !important;
+}
+.no-padding {
+  padding: 0rem !important;
+}
+.ant-row{
+  row-gap: 1rem !important;
+}
+.pointer{
+  cursor: pointer;
+}
+
+.tox .tox-notification--warn, .tox .tox-notification--warning {
+  display: none;
+}

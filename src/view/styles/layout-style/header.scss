@@ -1,0 +1,139 @@
+@use "variable";
+
+$margin: 1.3rem;
+$margin-top-body: 2.7rem;
+
+.header-component {
+  margin-right: 3.2rem;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+
+  &__search {
+    // margin-top: $margin;
+    margin-right: 1.8rem;
+  }
+
+  &__language {
+    margin-right: $margin;
+  }
+
+  &__identify {
+    text-align: left;
+    color: $color-header-text;
+
+    .identify {
+      &__hi {
+        font-weight: $font-weight-medium;
+        font-size: $fs-0;
+        color: $color-header-text;
+        opacity: 0.5;
+        line-height: 1.8rem;
+      }
+
+      &__place {
+        font-size: $fs-1;
+        color: $color-header-text;
+        line-height: 2.1rem;
+      }
+
+      &__admin {
+        font-weight: $font-weight-bold;
+        font-size: $fs-1;
+        color: $color-header-text;
+        line-height: 2.1rem;
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  &__dropdown {
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+
+  .notification-badge {
+    cursor: pointer;
+    padding: 10px;
+    background: $color-white;
+    border-radius: 400px;
+    box-shadow: 0px 0px 8px #E3E3E3;
+
+    svg {
+      color: $color-item;
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+  }
+}
+
+.icon {
+  &__language {
+    position: relative;
+    font-size: 1.5rem;
+
+    i {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__avatar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.dropdown-menu.profile {
+  padding: 1.5rem;
+  color: $color-white;
+  text-align: center;
+
+  .item {
+    color: $color-primary-light;
+    padding: 0.3rem 1rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-select-active;
+      color: $color-white;
+    }
+  }
+}
+
+.dropdown__profile__img {
+  width: 4.8rem;
+  margin-right: $margin;
+  margin-left: $margin;
+
+  img {
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 4.8rem;
+    object-fit: cover;
+  }
+}
+
+.modal-body-upload {
+  color: $color-main-text;
+
+  .wrap-image.text-center {
+    display: flex;
+    align-items: center;
+  }
+
+}
+
+.header-component__identify {
+  cursor: pointer;
+}

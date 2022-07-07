@@ -1,0 +1,57 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "baseUrl": "./",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "module": "esnext",
+    "allowSyntheticDefaultImports": true,
+    "target": "es6",
+    "jsx": "react",
+    "lib": ["es2018", "dom"],
+    "paths": {
+      "@config": ["src/config"],
+      "@config/*": ["src/config/*"],
+      "@core/*": ["src/core/*"],
+      "@locale/*": ["src/locale/*"],
+      "@modules": ["src/modules"],
+      "@modules/*": ["src/modules/*"],
+      "@layout/*": ["src/layout/*"],
+      "@routers/*": ["src/routers/*"],
+      "@repository/*": ["src/modules/core/repository/*"],
+      "@store/*": ["src/modules/core/store/*"],
+      "@styles/*": ["src/view/styles/*"],
+      "@view/*": ["src/view/*"],
+      "@assets/*": ["src/shared/assets/*"],
+      "@helper/*": ["src/shared/helper/*"],
+      "@hoc/*": ["src/shared/hoc/*"],
+      "@shared/*": ["src/shared/*"],
+      "@hook/*": ["src/shared/hook/*"],
+      "@components/*": ["src/shared/components/*"]
+    },
+    "plugins": [
+      {
+        "transform": "@formatjs/ts-transformer",
+        "import": "transform",
+        "type": "config",
+        "overrideIdFn": "[sha512:contenthash:base64:6]",
+        "ast": true
+      }
+    ],
+    "types": ["node", "lodash"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true
+  },
+  "typeRoots": ["./src/@types", "node_modules/@types"],
+  "include": ["./src/**/*"],
+  "lib": ["es2018", "dom", "es6"],
+  "exclude": ["node_modules", "build", "scripts", "dist", "blueprint-templates"]
+}

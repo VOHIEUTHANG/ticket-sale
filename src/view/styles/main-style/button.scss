@@ -1,0 +1,99 @@
+@use "variable";
+
+.ant-btn,
+button.ant-btn.normal-button,
+.ant-modal-confirm-btns button.ant-btn,
+button.ant-btn.cancel-button,
+.normal-button,
+.cancel-button {
+  min-width: 15rem;
+  min-height: 4.8rem;
+  border-radius: 0.8rem;
+  font-weight: bold;
+  font-size: $fs-2;
+  padding: 0;
+  transition: All 0.3s;
+  border: 1px solid $color-button-normal;
+
+  background: $color-button-normal;
+  color: $color-button-cancel;
+
+  &:hover {
+    background: $color-button-cancel;
+    color: $color-button-normal;
+    border: 1px solid $color-button-normal;
+
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.delete-button {
+  border: 1px solid $color-button-normal;
+  color: $color-button-cancel;
+  color: $color-button-normal;
+}
+
+button.ant-btn.disabled-button {
+  min-width: 15rem;
+  height: 4.8rem;
+  border-radius: 0.8rem;
+  font-weight: bold;
+  font-size: $fs-3;
+}
+
+button.ant-btn.bg-custom-button {
+  background-color: $color-button-normal;
+  color: $color-button-cancel;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  transition: 0.2s;
+  font-weight: $font-weight-bold;
+  height: 4rem;
+  border: none;
+}
+
+.ant-btn,
+button.ant-btn.cancel-button,
+button.ant-btn.ant-btn-dangerous,
+.cancel-button {
+  background: $color-button-cancel;
+  color: $color-button-normal;
+
+  &:hover {
+    background: $color-button-normal;
+    color: $color-button-cancel;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.button-center__box {
+  text-align: center;
+}
+
+.ant-modal-confirm .ant-modal-confirm-btns .ant-btn+.ant-btn {
+  background: $color-button-normal;
+  color: $color-button-cancel;
+
+  &:hover {
+    background: $color-button-cancel;
+    color: $color-button-normal;
+    border: 1px solid $color-button-normal;
+  }
+}
+
+.modal-delete-confirm .ant-modal-content .ant-modal-body .ant-modal-confirm-btns button:first-child {
+  &:hover {
+    background: $color-button-normal;
+    color: $color-button-cancel;
+    border: 1px solid $color-button-normal;
+  }
+}

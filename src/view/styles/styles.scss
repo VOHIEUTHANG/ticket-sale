@@ -1,0 +1,10 @@
+//----------------------------------------------
+//THIS FILE USE TO IMPORT SCSS, DO NOT CODE HERE
+//----------------------------------------------
+@import "./variable";
+@import "./mixin";
+
+//IMPORT YOUR FOLDER STYLE HERE
+@import "./main-style/style_index.scss";
+@import "./layout-style/styles-index.scss";
+@import "./component-style/style-index.scss";

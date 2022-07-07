@@ -1,0 +1,22 @@
+.lazyLoad-img {
+  height: 100%;
+  width: 100%;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.ant-skeleton.skeleton.ant-skeleton-element.ant-skeleton-active {
+  width: 100%;
+  height: 100%;
+}
+
+span.ant-skeleton-button.skeleton.ant-skeleton-button-lg.ant-skeleton-button-square {
+  width: 100%;
+  height: 100%;
+}
+/*# sourceMappingURL=LazyLoadImage.css.map */

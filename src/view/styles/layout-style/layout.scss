@@ -1,0 +1,248 @@
+@use 'variable';
+
+.all-page-component {
+  display: flex;
+  height: 100%;
+  background-color: $color-background;
+  flex-direction: row;
+}
+
+.logo-header {
+  width: 22.4rem;
+  object-fit: contain;
+  height: fit-content;
+  margin-top: 2.4rem;
+  margin-left: 6.5rem;
+}
+.layout-filter {
+  display: flex;
+  justify-content: space-between;
+}
+.Choosefile-modal {
+  background-color: #fafbfc;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  font-weight: 500;
+  line-height: 20px;
+  padding: 6px 16px;
+}
+.profile-page {
+  margin-left: 7rem;
+}
+.right-page-component {
+  width: 100%;
+  overflow-y: auto;
+  z-index: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.main-component {
+  padding: 0rem 5.6vw 1rem 1.6vw;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.ant-badge-status-text {
+  font-size: $fs-2;
+}
+
+.ant-badge-status-dot {
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
+.ant-input-number,
+.ant-tooltip,
+.ant-select-item,
+.ant-select,
+.ant-table {
+  font-size: $fs-1;
+}
+
+.ant-menu-vertical > .ant-menu-item,
+.ant-menu-vertical-left > .ant-menu-item,
+.ant-menu-vertical-right > .ant-menu-item,
+.ant-menu-inline > .ant-menu-item,
+.ant-menu-vertical > .ant-menu-submenu > .ant-menu-submenu-title,
+.ant-menu-vertical-left > .ant-menu-submenu > .ant-menu-submenu-title,
+.ant-menu-vertical-right > .ant-menu-submenu > .ant-menu-submenu-title,
+.ant-menu-inline > .ant-menu-submenu > .ant-menu-submenu-title {
+  height: 4rem;
+  line-height: 4rem;
+  padding: 0 1.6rem;
+}
+
+.select-label-component .select-custom .ant-select-selector .ant-select-selection-item,
+.select-label-component .ant-select .ant-select-selector .ant-select-selection-item,
+.select-label-component .ant-select-single .ant-select-selector .ant-select-selection-item,
+.select-label-component
+  .ant-select:not(.ant-select-customize-input)
+  .ant-select-selector
+  .ant-select-selection-item {
+  padding: 0.4rem 1rem;
+  margin-right: 1rem;
+}
+
+.ant-picker-cell-in-view.ant-picker-cell-range-hover-start:not(.ant-picker-cell-in-range):not(.ant-picker-cell-range-start):not(.ant-picker-cell-range-end)::after,
+.ant-picker-cell-in-view.ant-picker-cell-range-hover-end:not(.ant-picker-cell-in-range):not(.ant-picker-cell-range-start):not(.ant-picker-cell-range-end)::after,
+.ant-picker-cell-in-view.ant-picker-cell-range-hover-start.ant-picker-cell-range-start-single::after,
+.ant-picker-cell-in-view.ant-picker-cell-range-hover-start.ant-picker-cell-range-start.ant-picker-cell-range-end.ant-picker-cell-range-end-near-hover::after,
+.ant-picker-cell-in-view.ant-picker-cell-range-hover-end.ant-picker-cell-range-start.ant-picker-cell-range-end.ant-picker-cell-range-start-near-hover::after,
+.ant-picker-cell-in-view.ant-picker-cell-range-hover-end.ant-picker-cell-range-end-single::after,
+.ant-picker-cell-in-view.ant-picker-cell-range-hover:not(.ant-picker-cell-in-range)::after {
+  height: 2.4rem;
+}
+
+.ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+  height: 5rem;
+  padding: 0 1.1rem;
+}
+
+.ant-select-dropdown {
+  padding: 0.4rem 0rem;
+}
+
+.ant-select-item {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  min-height: 5rem;
+  padding: 0.5rem 1.2rem;
+  line-height: 2.2rem;
+}
+
+span.ant-select-selection-item {
+  padding: 0.4rem 1rem;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.ant-table-column-sorter-up,
+.ant-table-column-sorter-down {
+  font-size: $fs-0 !important;
+  width: initial;
+  height: initial;
+}
+
+.ant-select-single.ant-select-show-arrow .ant-select-selection-search {
+  right: 2.5rem;
+  left: 1.1rem;
+}
+
+.ant-input-number-input {
+  height: 3rem;
+}
+
+.ant-select-arrow {
+  width: 1.2rem;
+  height: 1.2rem;
+  right: 1.1rem;
+  margin-top: 0rem;
+  font-size: $fs-0;
+  top: 50%;
+  transform: translate(0px, -50%);
+}
+.ant-picker-suffix {
+  color: $color-item;
+}
+.ant-pagination-item {
+  min-width: 3.2rem;
+  height: 3.2rem;
+  margin-right: 0.8rem;
+  line-height: 3rem;
+}
+
+.ant-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-arrow svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  font-size: $fs-0;
+}
+
+.ant-pagination-prev .ant-pagination-item-link,
+.ant-pagination-next .ant-pagination-item-link {
+  font-size: $fs-0;
+}
+
+.ant-pagination {
+  font-size: $fs-1;
+}
+
+.ant-table-pagination.ant-pagination {
+  margin: 1.6rem 0rem;
+}
+
+.ant-table-pagination {
+  row-gap: 0.8rem;
+}
+
+.ant-pagination-prev,
+.ant-pagination-next,
+.ant-pagination-jump-prev,
+.ant-pagination-jump-next {
+  height: 3.2rem;
+  min-width: 3.2rem;
+  line-height: 3.2rem;
+}
+
+.ant-tag {
+  font-size: $fs-0;
+  padding: 0 0.7rem;
+  margin-right: 0.8rem;
+}
+
+.ant-modal-close-x {
+  width: 4.4rem;
+  height: 4.4rem;
+  line-height: 4.4rem;
+  font-size: $fs-2;
+
+  svg {
+    width: 2.7rem;
+    height: 2.7rem;
+    font-size: $fs-6;
+  }
+}
+
+.ant-form-vertical .ant-form-item-label,
+.ant-col-24.ant-form-item-label,
+.ant-col-xl-24.ant-form-item-label {
+  padding: 0 0 0.8rem;
+}
+
+.ant-form-item {
+  font-size: $fs-1;
+}
+
+.ant-form-item-control-input {
+  min-height: 3.2rem;
+}
+
+.ant-select-single .ant-select-selector .ant-select-selection-search {
+  right: 1.1rem;
+  left: 1.1rem;
+}
+
+.ant-select-single:not(.ant-select-customize-input)
+  .ant-select-selector
+  .ant-select-selection-search-input {
+  height: 100%;
+}
+
+.ant-list-grid .ant-col > .ant-list-item {
+  margin-bottom: 1.6rem;
+}
+
+.ant-list-item {
+  padding: 1.2rem 0;
+}
+
+.ant-list {
+  font-size: $fs-1;
+}

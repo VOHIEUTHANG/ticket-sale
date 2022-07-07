@@ -1,0 +1,64 @@
+@use "variable";
+
+.ant-notification-notice {
+  padding: 0;
+}
+
+.ant-notification-hook-holder,
+.ant-notification-notice {
+  background-color: $color-card;
+}
+
+.ant-notification.ant-notification-topRight {
+  color: $color-white;
+}
+
+
+
+.ant-notification-notice-message {
+  color: $color-white;
+  background-color: $color-primary;
+  padding: 1.4rem 4rem;
+
+}
+
+.ant-notification-notice-content,
+.ant-notification-hook-holder,
+.ant-notification-notice {
+  border-radius: 1rem;
+}
+
+
+.ant-notification-notice-description {
+  padding: 3rem 4rem 3.5rem;
+}
+
+span.anticon.anticon-close.ant-notification-close-icon {
+  vertical-align: 0;
+}
+
+.ant-notification-notice-description {
+  color: $color-main-text;
+  text-align: center;
+}
+
+.ant-notification-notice-message {
+  text-align: center;
+}
+
+.ant-notification-notice-closable .ant-notification-notice-message {
+  padding-right: 4rem;
+}
+
+// have icon success
+span.anticon.anticon-check-circle.ant-notification-notice-icon.ant-notification-notice-icon-success {
+  display: none;
+}
+
+.ant-notification-notice-with-icon .ant-notification-notice-message {
+  margin-left: 0;
+}
+
+.ant-notification-notice-with-icon .ant-notification-notice-description {
+  margin-left: 0;
+}

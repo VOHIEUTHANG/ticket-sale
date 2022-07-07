@@ -1,0 +1,208 @@
+@use "variable";
+
+.search-in-table {
+  margin-top: -7.1rem;
+}
+
+.card-main-table {
+  background: $color-table-background;
+  border-radius: 1.2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  .ant-badge-status-text {
+    font-size: $fs-1;
+  }
+
+  //CHANGE PAGE SIZE
+  .table-function {
+    margin-top: -4.3rem;
+
+    .ant-input-number {
+      padding: 0.4rem;
+      color: $color-ant-input;
+      width: 4.8rem;
+      border: 1px solid $color-primary;
+      border-radius: 4px;
+      margin: 0 8px;
+    }
+
+    .ant-input-number-handler-wrap {
+      display: none;
+    }
+
+    .ant-input-number-input {
+      padding: 0;
+      color: $color-table-text;
+      font-weight: $font-weight-medium;
+      text-align: center;
+
+      &::-webkit-inner-spin-button,
+      &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+  }
+
+  .pagesize {
+    &--show,
+    &--entries {
+      color: $color-primary;
+      font-size: $fs-0;
+    }
+  }
+}
+
+.main-table {
+  height: 100%;
+
+  .ant-spin-nested-loading {
+    height: 100%;
+
+    .ant-spin-container {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  //table head
+  .ant-table-thead > tr > th {
+    color: $color-white;
+    background: $color-table-head;
+    font-weight: $font-weight-medium;
+  }
+
+  //padding for all table
+  .ant-table-tbody > tr > td,
+  .ant-table-thead > tr > th {
+    padding: 1.2rem 0.8rem;
+  }
+
+  //for text color
+  .ant-table {
+    color: $color-table-text;
+  }
+
+  //for even row background color
+  tr.ant-table-row:nth-child(even) {
+    background: $color-grey-light-1;
+  }
+
+  // for border table
+  .ant-table-container table > thead > tr:first-child th:first-child {
+    border-top-left-radius: $border-radius;
+  }
+
+  .ant-table-container table > thead > tr:first-child th:last-child {
+    border-top-right-radius: $border-radius;
+  }
+
+  .ant-table-tbody > tr.ant-table-row:last-child > td:first-child {
+    border-bottom-left-radius: $border-radius;
+  }
+
+  .ant-table-tbody > tr.ant-table-row:last-child > td:last-child {
+    border-bottom-right-radius: $border-radius;
+  }
+
+  //for detail css
+  .ant-table-thead
+    > tr
+    > th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before {
+    background-color: transparent;
+  }
+
+  //PAGINATION
+  .ant-pagination-item {
+    border: none;
+  }
+
+  li.ant-pagination-item {
+    color: $color-black;
+  }
+
+  li.ant-pagination-item-active {
+    background: $color-white;
+    border-radius: 4px;
+    border: 1px solid $color-primary;
+    color: $color-black;
+  }
+
+  .ant-pagination-disabled .ant-pagination-item-link {
+    color: $color-primary;
+    border-color: transparent;
+  }
+
+  .ant-pagination-prev .ant-pagination-item-link,
+  .ant-pagination-next .ant-pagination-item-link {
+    border-color: transparent;
+  }
+
+  .ant-pagination-next .ant-pagination-item-link {
+    background-color: $color-white;
+    color: $color-primary;
+  }
+
+  .icon-edit {
+    color: $color-primary;
+    cursor: pointer;
+    width: 2.4rem;
+    height: 2.4rem;
+    font-size: $fs-5;
+  }
+
+  .ant-pagination-item {
+    font-family: $main-font;
+  }
+
+  .ant-pagination-options-size-changer.ant-select {
+    display: none;
+  }
+
+  .ant-table-summary {
+    .ant-typography {
+      color: $color-primary;
+      font-size: $fs-1;
+    }
+
+    .ant-table-cell {
+      border-bottom: none;
+    }
+  }
+
+  .ant-badge-not-a-wrapper {
+    width: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+
+  .ant-table-selection-col {
+    width: 4.5rem;
+  }
+
+  .ant-table-tbody > tr.ant-table-row-selected > td {
+    background-color: $color-primary-light;
+  }
+}
+
+.main-table:hover .ant-table-thead > tr > th {
+  background: #61c6e9;
+}
+
+.ant-select:not(.ant-select-disabled):hover,
+.ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) {
+  .ant-select-selector {
+    border-color: $color-table-border;
+    box-shadow: none;
+  }
+}
+
+.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
+  border-color: $color-primary;
+}

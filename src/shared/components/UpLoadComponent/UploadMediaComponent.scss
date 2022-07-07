@@ -1,0 +1,91 @@
+.upload-component {
+    #input-media {
+        display: none;
+    }
+
+    .wrap-image {
+        padding: 10px;
+        border-radius: 10px;
+        //border: 2px dashed dimgray;
+        position: relative;
+        cursor: pointer;
+        // background-color: #1e1e2e;
+        border: 3px solid #F6F6F6;
+        .fas.fa-cloud-upload-alt{
+            color: #fff;
+        }
+
+        &:hover {
+            opacity: 0.7;
+
+            .open-modal {
+                z-index: 3;
+                opacity: 1;
+            }
+        }
+
+        .open-modal {
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            // span.anticon.anticon-plus {
+            //     color: #000000;
+            //     font-size: 25px;
+            // }
+        }
+        .lazyLoad-img{
+            img{
+                width: unset !important;
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
+.ant-modal.modal-general.modal-media {
+    top: 20px !important
+}
+
+.lazyload-wrapper {
+    height: 100% !important;
+}
+
+.list-media-to-choose {
+    height: fit-content;
+
+    .wrap-list {
+        max-height: 700px;
+        overflow-y: auto;
+    }
+
+    .item-image {
+        height: 161px !important;
+        width: 161px !important;
+        cursor: pointer;
+
+        &:hover {
+            border-radius: 10px;
+            border: 2px dashed dimgray;
+            opacity: 0.8;
+        }
+
+        p {
+            margin: 0;
+            font-size: 12px;
+            -webkit-line-clamp: 2;
+            height: 36px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    }
+
+    .active {
+        border-radius: 10px;
+        border: 2px dashed dimgray;
+        opacity: 0.8;
+    }
+}

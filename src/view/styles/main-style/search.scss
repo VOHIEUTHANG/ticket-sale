@@ -1,0 +1,91 @@
+@use 'variable';
+@use 'mixin';
+
+.search-label-default {
+  color: $color-primary;
+  opacity: 0.8;
+  font-weight: $font-weight-medium;
+  font-size: $fs-2;
+}
+.search-bar {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 1.6rem;
+  background-color: $color-white;
+  box-shadow: 0rem 0rem 0.4rem #e3e3e3;
+  margin-right: 2.4rem;
+  border-radius: 0.8rem;
+  height: 4.7rem;
+
+  .ant-input-affix-wrapper,
+  input {
+    background: $color-white !important;
+    border: 1px solid $color-white;
+    box-sizing: border-box;
+    padding: 1.1rem 1.6rem;
+    font-size: 1.4rem;
+    width: 50rem;
+    outline: none;
+    border-radius: 0.8rem;
+
+    .ant-input-prefix {
+      svg {
+        color: $color-item;
+        width: 2.4rem;
+        height: 2.4rem;
+        font-size: $fs-5;
+      }
+    }
+    .ant-input-suffix {
+      svg {
+        color: #d9d9d9;
+        width: 17.6px;
+        height: 17.6px;
+        font-size: $fs-5;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1381px) {
+    .ant-input-affix-wrapper,
+    input {
+      width: auto;
+    }
+  }
+
+  .ant-input-affix-wrapper-focused,
+  .ant-input-affix-wrapper:focus {
+    box-shadow: 0rem 0rem 0.4rem $color-primary;
+  }
+
+  .icon-search {
+    position: absolute;
+    top: 50%;
+    right: 1.6rem;
+    transform: translateY(-50%);
+    color: $color-item;
+
+    svg {
+      color: $color-primary;
+      width: 2.4rem;
+      height: 2.4rem;
+      font-size: $fs-5;
+    }
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  input.form-search.ant-form-search {
+    padding-right: 6.4rem;
+    width: 30vw;
+    @include text-wrap();
+  }
+}
+
+.to-right {
+  float: right;
+}
+
+.to-left {
+  float: left;
+}

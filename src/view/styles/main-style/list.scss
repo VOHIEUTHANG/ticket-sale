@@ -1,0 +1,69 @@
+.main-list {
+  .padding-here {
+    padding: 1.5rem 3rem;
+  }
+
+  .ant-table-pagination.ant-pagination {
+    margin-top: 4rem;
+    margin-bottom: 8px;
+    margin-right: 2rem;
+  }
+
+  .ant-pagination-item,
+  .ant-pagination-item a {
+    background-color: transparent;
+    border: none;
+    color: $color-primary;
+  }
+
+  .ant-pagination-item a {
+    padding: 0;
+  }
+
+  .ant-pagination-item {
+    min-width: 2rem;
+  }
+
+  .ant-pagination-jump-prev .ant-pagination-item-container .ant-pagination-item-ellipsis,
+  .ant-pagination-jump-next .ant-pagination-item-container .ant-pagination-item-ellipsis {
+    color: $color-primary;
+
+  }
+
+  .ant-pagination-prev .ant-pagination-item-link,
+  .ant-pagination-next .ant-pagination-item-link {
+    background-color: transparent;
+    border: none;
+    color: $color-primary;
+
+  }
+
+  .ant-pagination-options {
+    display: none;
+  }
+
+  .ant-pagination-jump-prev .ant-pagination-item-container .ant-pagination-item-link-icon,
+  .ant-pagination-jump-next .ant-pagination-item-container .ant-pagination-item-link-icon {
+    color: $color-primary;
+  }
+
+  .ant-pagination-item {
+    font-family: $main-font;
+  }
+
+  .ant-pagination-item.ant-pagination-item-active,
+  .ant-pagination-item.ant-pagination-item-active a,
+  .ant-pagination-item.ant-pagination-item-active a:not([href]):not([tabindex]):focus,
+  .ant-pagination-item.ant-pagination-item-active a:not([href]):not([tabindex]):hover {
+    font-weight: $font-weight-bold;
+    font-size: $fs-1;
+  }
+
+  .ant-pagination-item.ant-pagination-item-active a {
+    width: 2.6rem;
+    height: 2.6rem;
+    background: $color-primary;
+    border-radius: 4px;
+    color: $color-white;
+  }
+}

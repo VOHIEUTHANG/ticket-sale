@@ -1,0 +1,10 @@
+@media print {
+
+    #cardSalary {
+        margin: 0;
+        color: #000;
+        background-color: #38fff3;
+        font-size: 2rem;
+    }
+
+}

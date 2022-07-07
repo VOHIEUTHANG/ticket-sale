@@ -1,0 +1,45 @@
+@use "variable";
+
+.label-select {
+  font-weight: $font-weight-medium;
+  font-size: $fs-2;
+  color: $color-primary;
+}
+
+.select-label-component {
+
+  .select-custom,
+  .ant-select,
+  .ant-select-single,
+  .ant-select:not(.ant-select-customize-input) {
+    .ant-select-selector {
+      background-color: $color-table-background;
+      min-height: 4.4rem;
+      border-radius: 6px;
+      border: 1px solid $color-table-border;
+
+      .ant-select-selection-item {
+        padding: .4rem 1rem;
+        margin-right: 1rem;
+      }
+
+      .ant-select-selection-placeholder {
+        padding: .5rem 0;
+      }
+    }
+
+    .ant-select-arrow {
+      margin-right: 1rem;
+    }
+  }
+
+  .suffix-icon {
+    color: #1d519e;
+    margin-top: -0.5rem;
+  }
+
+  .ant-select-single .ant-select-selector .ant-select-selection-item,
+  .ant-select-single .ant-select-selector .ant-select-selection-placeholder {
+    line-height: 3.3rem;
+  }
+}

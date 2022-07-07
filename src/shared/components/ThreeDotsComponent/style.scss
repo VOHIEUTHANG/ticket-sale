@@ -1,0 +1,18 @@
+@import  "../../../styles/variable.scss";
+.three-dots {
+  border: none !important;
+  color:  $color__yellow__second !important;
+  background: transparent !important;
+  box-shadow: none;
+  display: inline-block;
+  .fa {
+    font-size: 1.2rem !important; 
+  }
+  &:hover {
+    background: transparent !important;
+  }
+  &:focus {
+    box-shadow: none !important;
+    
+  }
+}

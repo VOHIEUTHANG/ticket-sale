@@ -1,0 +1,230 @@
+@import "../styles/variable.scss";
+@import "../styles/mixin.scss";
+
+.auth-page {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  background-color: $color-black;
+
+  .main-form .ant-picker-large,
+  .main-form .ant-input-number,
+  .main-form .ant-input,
+  .main-form .ant-input-affix-wrapper {
+    color: $color-main-text;
+  }
+
+  @media only screen and (max-height: 768px) {
+    height: 100%;
+    min-height: 100vh;
+    overflow: auto;
+  }
+
+  .language__box {
+    position: absolute;
+    right: 2.4rem;
+    top: 2.5rem;
+
+    @include respond(sm-screen) {
+      right: 1rem;
+      top: 1rem;
+    }
+
+    .change-language__item {
+      font-size: $fs-4;
+      font-weight: $font-weight-medium;
+      line-height: 1.5;
+      color: $color-primary;
+    }
+  }
+
+  .main__box {
+    width: 90%;
+    margin: 0 auto;
+
+    @include respond(sm-screen) {
+      width: 100%;
+    }
+
+    .logo__box {
+      width: 33rem;
+      margin: 0 auto;
+      margin-top: 17.2rem;
+      margin-bottom: 9.2rem;
+
+      @include respond(xxl-screen) {
+        width: 25rem;
+        margin-top: 5rem;
+        margin-bottom: 3.5rem;
+      }
+
+      @include respond(xl-screen) {
+        width: 20rem;
+        margin-top: 4rem;
+        margin-bottom: 2.5rem;
+      }
+
+      @include respond(sm-screen) {
+        margin-top: 7rem;
+        margin-bottom: 4rem;
+      }
+
+      img {
+        height: auto;
+        width: 100%;
+      }
+    }
+  }
+
+  .nav-link__bottom {
+    color: $color-main-text;
+    font-size: $fs-2;
+    font-weight: $font-weight-bold;
+    line-height: 1.5;
+    position: absolute;
+    bottom: 3.6rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include respond(xxl-screen) {
+      bottom: 1.6rem;
+    }
+
+    @include respond(lg-screen) {
+      position: relative;
+      margin-top: 5rem;
+      text-align: center;
+    }
+
+    @media only screen and (max-height: 768px) {
+      position: relative;
+      margin-top: 5rem;
+      text-align: center;
+    }
+  }
+}
+
+.auth-form {
+  background-image: url("../../shared/assets/images/bg-err.png");
+  background-size: 100% 100%;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+
+  .content-form {
+    background-color: $color-primary;
+    margin-top: 5%;
+    display: inline-block;
+    width: 40%;
+    padding: 3rem 10rem;
+    border-radius: 5rem;
+  }
+
+  .main-title {
+    text-align: center;
+    font-weight: $font-weight-bold;
+    font-size: $fs-7;
+    color: $color-black;
+    margin-bottom: 10%;
+    margin-top: 0;
+  }
+
+  .ant-form-item-label>label {
+    color: #4d4d4d;
+  }
+
+  .ant-checkbox-wrapper {
+    color: $color-white;
+  }
+
+  .ant-checkbox-inner {
+    border-color: $color-white;
+  }
+
+  .ant-form-item-with-help .ant-form-item-explain {
+    text-align: left;
+  }
+}
+
+.or-method__box {
+  text-align: center;
+  opacity: 50%;
+  font-size: $fs-1;
+  line-height: 1.5;
+}
+
+.login-otp-form {
+
+  .ant-btn,
+  button.ant-btn.normal-button,
+  .ant-modal-confirm-btns button.ant-btn,
+  button.ant-btn.cancel-button,
+  .normal-button,
+  .cancel-button {
+    min-width: 25rem;
+  }
+
+  .captcha__box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3.2rem;
+  }
+
+  .otp-input__box {
+    .ant-form-item {
+      margin-bottom: 1.2rem;
+    }
+
+    .otp__box {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .status-otp {
+      color: #6c7585;
+      font-size: $fs-2;
+      font-weight: $font-weight-normal;
+      line-height: 1.5;
+      margin-bottom: 1.2rem;
+
+      .ant-statistic {
+        display: inline-block;
+
+        .ant-statistic-content {
+          font-size: inherit;
+        }
+      }
+    }
+
+    .link-otp {
+      display: block;
+      margin-bottom: 3.2rem;
+      color: $color-secondary-light;
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  .lock-account__box {
+    padding: 1rem;
+
+    @include respond(sm-screen) {
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    p {
+      font-size: $fs-2;
+      font-weight: $font-weight-normal;
+      line-height: 1.5;
+      text-align: center;
+      margin-bottom: 3.2rem;
+    }
+  }
+}

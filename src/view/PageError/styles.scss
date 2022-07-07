@@ -1,0 +1,70 @@
+@import "../styles/variable.scss";
+@import "../styles/mixin.scss";
+
+.page-error {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../../shared/assets/images/bg-err.png");
+  background-size: 100% 100%;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+
+  .btn-err {
+    background: linear-gradient(
+      180deg,
+      #2b92c2 -18.18%,
+      #1277b5 48.58%,
+      #11489c 118.18%
+    );
+    border: 1px solid white;
+    border-radius: 15rem;
+    box-shadow: 8.22222px 8.22222px 8.22222px rgba(0, 0, 0, 0.44);
+    color: white;
+    padding: 0 3.2rem;
+  }
+
+  .label-logo-forgot {
+    width: 25%;
+    height: auto;
+    margin: 5rem 0;
+    max-width: 30rem;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .main-content {
+    max-width: 80rem;
+    text-align: center;
+
+    .title-404 {
+      font-weight: bold;
+      font-size: 26rem;
+      color: #00aeeb;
+      margin-top: 5rem;
+    }
+
+    .page-not-found {
+      font-size: 2.4rem;
+      line-height: 2.9rem;
+      color: $color-main-text;
+      opacity: 0.8;
+    }
+
+    .note-404 {
+      margin-top: 2.4rem;
+      font-size: 1.6rem;
+      line-height: 1.5;
+      color: $color-main-text;
+      opacity: 0.6;
+    }
+  }
+}

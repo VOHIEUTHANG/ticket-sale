@@ -1,0 +1,43 @@
+@use "variable";
+
+.main-title-breadcrumb__box {
+  margin-bottom: 1.2rem;
+  margin-top: 0.1rem;
+}
+
+//======Breadcrumb=========
+.breadcrumb__box {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+  font-weight: $font-weight-medium;
+  font-size: $fs-3;
+  line-height: 2.7rem;
+  color: $color-black;
+
+  a {
+    opacity: 0.8;
+    font-weight: $font-weight-medium;
+    color: $color-black;
+
+  }
+
+  .breadcrumb__li:first-child {
+    padding-left: 0;
+  }
+
+  .breadcrumb__last {
+    a {
+      opacity: 1;
+      color: $color-black;
+
+    }
+  }
+
+  .breadcrumb__icon {
+    .anticon svg {
+      color: $color-black;
+      font-size: 2.1rem;
+    }
+  }
+}

@@ -1,0 +1,70 @@
+@use "variable";
+
+.dropdown-menu {
+  background-color: $color-select;
+  border-radius: 5px;
+  padding: 5px 0;
+  border: 1px solid $color-primary;
+
+  .status {
+    color: $color-background-cancel;
+    padding: 3px 10px;
+    cursor: pointer;
+    width: 15rem;
+
+    &:hover {
+      background-color: $color-select-active;
+      color: $color-white;
+    }
+  }
+
+  .active {
+    background-color: $color-select-active;
+    color: $color-white;
+  }
+
+  //dropdown menu for ant design
+  a:not([href]):not([tabindex]) {
+    color: $color-background-cancel;
+  }
+
+  .ant-dropdown-menu-item:hover,
+  .ant-dropdown-menu-submenu-title:hover {
+    background-color: $color-select-active;
+  }
+
+  a:not([href]):not([tabindex]):focus,
+  a:not([href]):not([tabindex]):hover {
+    color: $color-main-text;
+  }
+}
+
+// dropdown arrow
+.ant-dropdown-placement-bottomCenter>.ant-dropdown-arrow,
+.ant-dropdown-placement-bottomLeft>.ant-dropdown-arrow,
+.ant-dropdown-placement-bottomRight>.ant-dropdown-arrow {
+  border-top-color: $color-select;
+  border-left-color: $color-select;
+}
+
+.ant-dropdown-placement-topCenter>.ant-dropdown-arrow,
+.ant-dropdown-placement-topLeft>.ant-dropdown-arrow,
+.ant-dropdown-placement-topRight>.ant-dropdown-arrow {
+  border-right-color: $color-select;
+  border-bottom-color: $color-select;
+}
+
+// Dropdown Facility information
+.ant-dropdown-menu-item {
+  @include style-text($font-weight-medium, $fs-2, 2.4rem, $color-primary-light);
+
+  &:hover {
+    color: $color-primary;
+    background-color: $color-primary-light;
+  }
+}
+
+.ant-dropdown-menu {
+  padding: 0;
+  border-radius: 3px;
+}

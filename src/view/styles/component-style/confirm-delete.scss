@@ -1,0 +1,82 @@
+@use "variable";
+
+.modal-delete-confirm {
+    .ant-modal-confirm-btns .ant-btn {
+        background-color: $color-button-cancel;
+        color: $color-button-normal;
+    }
+
+    .ant-modal-confirm-btns .ant-btn-primary {
+        background-color: $color-button-normal;
+        color: $color-button-cancel;
+        border-color: $color-button-normal;
+    }
+
+    .ant-modal-confirm-warning .ant-modal-confirm-body>.anticon,
+    .ant-modal-confirm-confirm .ant-modal-confirm-body>.anticon {
+        color: $color-button-cancel;
+    }
+
+
+
+    .ant-modal-content {
+        border-radius: 1.6rem;
+        overflow: hidden;
+
+        .ant-modal-body {
+            padding: 0;
+
+            .ant-modal-confirm-body>.anticon {
+                display: block;
+                font-size: 9.4rem;
+                background: $color-modal-label;
+
+                svg {
+                    color: $color-button-cancel;
+                }
+
+                width: 100%;
+                margin-right: 0;
+                padding: 4rem 0;
+            }
+
+            .ant-modal-confirm-body {
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                align-items: center;
+
+                .ant-modal-confirm-title {
+                    margin-top: 2.4rem;
+                    background-color: transparent;
+                    text-align: center;
+                    font-weight: $font-weight-bold;
+                    font-size: $fs-5;
+                    text-transform: unset;
+                    color: $color-primary;
+                    width: 40rem;
+                }
+            }
+
+            .ant-modal-confirm-body>.anticon+.ant-modal-confirm-title+.ant-modal-confirm-content {
+                font-size: $fs-2;
+                margin: 0 auto;
+                margin-top: 1.2rem;
+                text-align: center;
+                color: $color-modal-content;
+                width: 40rem;
+            }
+
+            .ant-modal-confirm-btns {
+                width: 100%;
+                justify-content: center;
+                display: flex;
+                margin: 3.4rem 0;
+
+                button:first-child {
+                    margin-right: 2.4rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,56 @@
+@import './../body.scss';
+@import './breadcumb.scss';
+@import './main-title.scss';
+@import './search.scss';
+@import './button.scss';
+@import './main-table.scss';
+@import './main-modal.scss';
+@import './radio-checkbox.scss';
+@import './dropdown.scss';
+@import './notification.scss';
+@import './select_multiple.scss';
+@import './list.scss';
+@import './main-tabs.scss';
+@import './main-card.scss';
+@import './circle-label.scss';
+@import './main-form.scss';
+@import './change-volume.scss';
+@import './loading-spin.scss';
+
+.anticon {
+  vertical-align: 0;
+}
+
+textarea.ant-input {
+  background-color: $color-white;
+  color: $color-main-text;
+  border: 1px solid #d9d9d9 !important;
+  border-radius: 8px;
+  box-sizing: border-box;
+  padding: 12px 24px 12px 16px;
+
+  &:focus {
+    border-color: #727288;
+    box-shadow: none;
+  }
+
+  &::placeholder {
+    color: #727288;
+  }
+}
+
+.table-icon {
+  margin: 0 4px;
+
+  svg {
+    width: 4px;
+    height: 4px;
+    color: #347aff;
+    background: #347aff;
+    border-radius: 25px;
+  }
+}
+
+.text-color {
+  color: rgba(255, 255, 255, 0.8);
+}

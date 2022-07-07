@@ -1,0 +1,50 @@
+@use "variable";
+
+.language-icon {
+  width: 2rem;
+  height: 2rem;
+  margin-left: 5px;
+  margin-bottom: 4px;
+}
+
+.select-custom {
+  .icon-angel-down {
+    font-size: $fs-4;
+    color: $color-main-text;
+    margin-top: -6px;
+  }
+
+  .ant-select-arrow {
+
+    .anticon>svg {
+      color: $color-main-text;
+    }
+  }
+
+
+  .ant-select,
+  .ant-select-single,
+  .ant-select:not(.ant-select-customize-input) {
+    .ant-select-selector {
+      background-color: $color-white;
+      border-radius: 8px;
+      border: 1px solid $color-main-text;
+      min-height: 4.6rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        border-color: $color-main-text;
+      }
+
+      .ant-select-selection-item {
+        padding: .6rem .5rem;
+        margin-right: 1.4rem;
+        font-weight: $font-weight-medium;
+        color: $color-main-text;
+        line-height: 1.5;
+      }
+    }
+  }
+}
