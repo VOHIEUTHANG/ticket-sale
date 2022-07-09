@@ -1,0 +1,71 @@
+@import '../../../view/styles/variable';
+@import '../../../view/styles/mixin';
+
+.sidebar-container {
+  padding: 17px 36px 31px 33px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: $color-text-secondary;
+  .logo {
+    display: inline-block;
+    img {
+      width: 133px;
+      height: 58px;
+    }
+  }
+
+  .nav-list {
+    margin-top: 67px;
+    .nav-item {
+      border-radius: 8px;
+      height: 56px;
+      margin: 8px 0;
+      padding-left: 26px;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+      @include centerFlexItem;
+      justify-content: flex-start;
+      &.active {
+        background-color: $color-yellow;
+        color: $color-white;
+        & path {
+          fill: $color-white;
+        }
+      }
+
+      & path {
+        fill: $color-text-secondary;
+        transition: all 0.3s ease-in-out;
+      }
+
+      &:hover {
+        background-color: $color-yellow;
+        color: $color-white;
+        & path {
+          fill: $color-white;
+        }
+      }
+      img {
+        fill: $color-text-secondary;
+        filter: brightness(200%);
+        opacity: 0.6;
+      }
+      span {
+        margin-left: 14px;
+      }
+    }
+  }
+  .copyright {
+    @include centerFlexItem;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    flex-wrap: nowrap;
+    margin-top: auto;
+    gap: 4px;
+    svg {
+      opacity: 0.6;
+    }
+  }
+}

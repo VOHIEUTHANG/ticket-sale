@@ -1,0 +1,69 @@
+@import '../../../view/styles/variable';
+@import '../../../view/styles/mixin';
+
+.content {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  flex: 1;
+  width: 100%;
+  padding: 24px;
+  background-color: $color-white;
+  border-radius: 24px;
+  &__title {
+    color: $color-text-primary;
+    margin-bottom: 32px;
+  }
+  &__features {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    .ant-btn {
+      color: $color-text-yellow;
+      border-color: $color-text-yellow;
+      path {
+        transition: all 0.3s;
+      }
+      &:hover {
+        background-color: $color-text-yellow;
+        color: $color-white;
+        path {
+          stroke: $color-white;
+        }
+      }
+      span + span {
+        margin-left: 10px;
+      }
+    }
+  }
+  &__data {
+    .data-table {
+      .ant-table {
+        table {
+          border-radius: 12px;
+          overflow: hidden;
+          tr {
+            &:nth-child(even) {
+              background-color: $color-background-light-blue;
+            }
+          }
+        }
+        .ant-table-thead > tr > th {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 25px;
+          background-color: $color-background-light-blue;
+        }
+        .ant-table-tbody > tr > td {
+          font-size: 14px;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+}
+
+.ant-table-thead > tr > th,
+.ant-table-tbody > tr > td,
+.ant-table tfoot > tr > th,
+.ant-table tfoot > tr > td {
+  padding: 11px 16px;
+}

@@ -1,0 +1,28 @@
+@import '../../../view/styles/variable';
+@import '../../../view/styles/mixin';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 48px;
+  margin-bottom: 20px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  &__search {
+    width: 470px;
+    height: 48px;
+  }
+  &__account {
+    display: flex;
+    align-items: center;
+    .account-item {
+      margin-left: 27px;
+    }
+  }
+  .wrapp-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

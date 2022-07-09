@@ -30,7 +30,8 @@ $color-item: #7b7979;
 $border-radius: 0.8rem;
 
 // FONT FAMILY
-$main-font: "Mali";
+$main-font: 'Mali';
+$secon-font: 'Montserrat', sans-serif;
 
 // FONT WEIGHT
 $font-weight-normal: 400;
@@ -106,3 +107,12 @@ $color-button-cancel: $color-white;
 $color-background-cancel: #afaeae;
 $color-select: #5e5b6a;
 $color-select-active: #8f8d97;
+
+// Ticket Sale Project Colors pallet
+$color-background-light-pink: #f9f6f4;
+$color-text-primary: rgba(30, 13, 3, 1);
+$color-text-secondary: rgba(30, 13, 3, 0.6);
+$color-yellow: #ffb800;
+$color-backgroud-light-gray: #ededed;
+$color-text-yellow: #ff993c;
+$color-background-light-blue: #f1f4f8;

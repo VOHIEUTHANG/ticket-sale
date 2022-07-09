@@ -3,8 +3,9 @@ import 'antd/dist/antd.css';
 import '@styles/styles.scss';
 
 import { ConfigProvider } from 'antd';
-import lodash from 'lodash';
-import React, { memo, Suspense, useEffect, useMemo } from 'react';
+// import lodash from 'lodash';
+import React, { useEffect, useMemo } from 'react';
+// import { memo, Suspense } from 'react';
 import { IntlProvider } from 'react-intl';
 import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router';
@@ -12,25 +13,26 @@ import { useHistory } from 'react-router';
 import locale from '@locale/index';
 import { TokenSelector } from '@modules/authentication/profileStore';
 import { LanguageSelector } from '@modules/setting/settingStore';
-import PrivatePage from '@routers/component/PrivatePage';
+// import PrivatePage from '@routers/component/PrivatePage';
 
-import PublicPage from '../routers/component/PublicPage';
+// import PublicPage from '../routers/component/PublicPage';
+import HomePage from 'src/pages/Home/TicketMana';
 
-const MainView = memo(({ statusLogin }: { statusLogin: boolean }) => {
-  return (
-    <>
-      {statusLogin ? (
-        <Suspense fallback={<></>}>
-          <PrivatePage />
-        </Suspense>
-      ) : (
-        <Suspense fallback={<></>}>
-          <PublicPage />
-        </Suspense>
-      )}
-    </>
-  );
-});
+// const MainView = memo(({ statusLogin }: { statusLogin: boolean }) => {
+//   return (
+//     <>
+//       {statusLogin ? (
+//         <Suspense fallback={<>Loading...</>}>
+//           <PrivatePage />
+//         </Suspense>
+//       ) : (
+//         <Suspense fallback={<>Loading...</>}>
+//           <PublicPage />
+//         </Suspense>
+//       )}
+//     </>
+//   );
+// });
 
 // For Test
 const App: React.FC = () => {
@@ -40,6 +42,7 @@ const App: React.FC = () => {
   const memoLangData = useMemo(() => {
     return locale[language];
   }, [language]);
+
   useEffect(() => {
     if (!token) {
       history.push('/login');
@@ -49,7 +52,8 @@ const App: React.FC = () => {
   return (
     <IntlProvider locale={language} messages={memoLangData}>
       <ConfigProvider locale={memoLangData}>
-        <MainView statusLogin={!lodash.isEmpty(token)} />
+        {/* <MainView statusLogin={!lodash.isEmpty(token)} /> */}
+        <HomePage />
       </ConfigProvider>
     </IntlProvider>
   );

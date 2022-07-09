@@ -1,19 +1,19 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin"); 
-const SRC_DIR = path.resolve(__dirname, "src/view");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
-const { TsConfigPathsPlugin } = require("awesome-typescript-loader");
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const SRC_DIR = path.resolve(__dirname, 'src/view');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const { TsConfigPathsPlugin } = require('awesome-typescript-loader');
 const VENDOR_LIBS = [
-  "axios",
-  "moment",
-  "react",
-  "react-dom",
-  "react-loadable",
+  'axios',
+  'moment',
+  'react',
+  'react-dom',
+  'react-loadable',
   // 'bootstrap',
-  "jquery",
-  "react-router",
-  "react-router-dom",
+  'jquery',
+  'react-router',
+  'react-router-dom',
   // 'recompose',
 ];
 module.exports = {

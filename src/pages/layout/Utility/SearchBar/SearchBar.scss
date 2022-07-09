@@ -1,0 +1,28 @@
+@import '../../../../view/styles/variable';
+@import '../../../../view/styles/mixin';
+
+.search {
+  min-width: 200px;
+  width: 400px;
+  padding: 10px 16px;
+  gap: 16px;
+  border-radius: 12px;
+  height: 48px;
+  background-color: $color-backgroud-light-gray;
+  @include centerFlexItem;
+  justify-content: space-between;
+  input {
+    outline: none;
+    background: transparent;
+    border: none;
+    flex: 1;
+    &::placeholder {
+      font-style: italic;
+      font-weight: normal;
+      line-height: inherit;
+    }
+  }
+  .search-icon {
+    flex-grow: 0;
+  }
+}
